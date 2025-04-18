@@ -83,10 +83,12 @@ THIRD_PARTY_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "drf_spectacular",
+    "tailwind"
 ]
 
 LOCAL_APPS = [
     "factoryboy_lecture.users",
+    "factoryboy_lecture.theme",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -350,3 +352,4 @@ SPECTACULAR_SETTINGS = {
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
+TAILWIND_APP_NAME = 'theme'
