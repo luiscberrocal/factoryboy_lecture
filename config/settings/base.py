@@ -90,6 +90,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "factoryboy_lecture.users",
     "factoryboy_lecture.theme",
+    "factoryboy_lecture.bucket_list"
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
