@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div>
+    <ul>
+      {% for country in countries %}
+        <li> {{ country.name }}</li>
+      {% endfor %}
+    </ul>
+
+  </div>
+
+{% endblock content %}

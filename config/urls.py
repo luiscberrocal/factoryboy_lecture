@@ -23,6 +23,7 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
     path("users/", include("factoryboy_lecture.users.urls", namespace="users")),
+    path("bucket-list/", include("factoryboy_lecture.bucket_list.urls", namespace="bucket_list")),
     path("accounts/", include("allauth.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
     # Your stuff: custom urls includes go here
