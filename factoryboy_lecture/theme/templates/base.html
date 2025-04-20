@@ -9,30 +9,16 @@
   {% tailwind_css %}
 </head>
 
-<body class="bg-green-900 font-serif leading-normal tracking-normal">
-<div class="navbar bg-base-100 shadow-sm">
-  <div class="flex-1">
-    <a class="btn btn-ghost text-xl">daisyUI</a>
+<body class="bg-fbl-blue dark:bg-fbl-blue text-white">
+<div class="grid grid-cols-12">
+  <div class="col-span-12">
+    <div class="pt-20 px-6">
+      {% block content %}
+        <h1>FactoryBoy Lecture</h1>
+
+      {% endblock content %}
+    </div>
   </div>
-  <div class="flex-none">
-    <ul class="menu menu-horizontal px-1">
-      <li><a>Link</a></li>
-      <li>
-        <details class="border-gray-600">
-          <summary>Parent</summary>
-          <ul class="bg-base-100 rounded-t-none p-2">
-            <li><a>Link 1</a></li>
-            <li><a>Link 2</a></li>
-          </ul>
-        </details>
-      </li>
-    </ul>
-  </div>
-</div>
-<div class="container mx-auto bg-green-300">
-  <section class="flex items-center justify-center h-screen">
-    <h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-  </section>
 </div>
 </body>
 </html>
