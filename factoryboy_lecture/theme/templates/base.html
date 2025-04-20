@@ -17,14 +17,14 @@
     {% include 'partials/sidebar.html' %}
   </div>
   <div class="col-span-11">
+    <a href="{% url 'change_theme' %}"
+       class="fixed top-36 right-0 p-3 rounded-l-lg
+         bg-blue-900 text-white hover:bg-blue-700
+         dark:bg-blue-600 dark:hover:bg-blue-400">
+      Change Theme</a>
     <div class="pt-20 px-6">
       {% block content %}
         <h1>FactoryBoy Lecture</h1>
-        <a href="{% url 'change_theme' %}"
-           class="fixed top-36 right-0 p-3 rounded-l-lg
-         bg-blue-900 text-white hover:bg-blue-700
-         dark:bg-blue-600 dark:hover:bg-blue-400">
-          Change Theme</a>
       {% endblock content %}
     </div>
   </div>
