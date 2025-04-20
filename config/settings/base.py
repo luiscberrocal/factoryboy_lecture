@@ -83,10 +83,13 @@ THIRD_PARTY_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "drf_spectacular",
+    "tailwind",
+    "django_browser_reload",
 ]
 
 LOCAL_APPS = [
     "factoryboy_lecture.users",
+    "factoryboy_lecture.theme",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -146,6 +149,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "allauth.account.middleware.AccountMiddleware",
+#     "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 # STATIC
@@ -350,3 +354,4 @@ SPECTACULAR_SETTINGS = {
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
+TAILWIND_APP_NAME = 'theme'
