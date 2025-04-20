@@ -46,10 +46,9 @@ class WishlistItemAdmin(admin.ModelAdmin):
 class DoneItemAdmin(admin.ModelAdmin):
     list_display = (
         'id',
-        'place',
-        'activity',
+        "wishlist_item",
         'completion_date',
         'notes',
         'rating',
     )
-    list_filter = ('place', 'activity', 'completion_date')
+    list_filter = ('completion_date',)
