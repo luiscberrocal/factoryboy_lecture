@@ -10,6 +10,8 @@ from drf_spectacular.views import SpectacularAPIView
 from drf_spectacular.views import SpectacularSwaggerView
 from rest_framework.authtoken.views import obtain_auth_token
 
+from factoryboy_lecture.theme.views import change_theme
+
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
@@ -21,9 +23,11 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
     path("users/", include("factoryboy_lecture.users.urls", namespace="users")),
+    path("bucket-list/", include("factoryboy_lecture.bucket_list.urls", namespace="bucket_list")),
     path("accounts/", include("allauth.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
     # Your stuff: custom urls includes go here
+    path("change-mode/", view=change_theme, name="change_theme"),
     # ...
     # Media files
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
