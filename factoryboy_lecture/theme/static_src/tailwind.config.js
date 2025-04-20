@@ -6,6 +6,7 @@
  */
 
 module.exports = {
+    darkMode: 'class',
     content: [
         /**
          * HTML. Paths to Django template files that will contain Tailwind CSS classes.
@@ -42,7 +43,10 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
+        extend: {
+            "bg-fbl-blue": "#1e40af",
+            "bg-fbl-dark-blue": "#172554",
+        },
     },
     plugins: [
         /**
@@ -53,5 +57,6 @@ module.exports = {
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('@tailwindcss/aspect-ratio'),
+        require('daisyui')
     ],
 }

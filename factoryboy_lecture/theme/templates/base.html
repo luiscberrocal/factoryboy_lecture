@@ -1,38 +1,33 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="{% if request.session.is_dark_mode %}dark{% endif %}">
 <head>
   <title>Django Tailwind</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   {% tailwind_css %}
 </head>
 
-<body class="bg-green-900 font-serif leading-normal tracking-normal">
-<div class="navbar bg-base-100 shadow-sm">
-  <div class="flex-1">
-    <a class="btn btn-ghost text-xl">daisyUI</a>
+<body class="bg-blue-600 dark:bg-blue-900 text-white">
+{% include 'partials/navbar.html' %}
+<div class="grid grid-cols-12">
+  <div class="col-span-1">
+    {% include 'partials/sidebar.html' %}
   </div>
-  <div class="flex-none">
-    <ul class="menu menu-horizontal px-1">
-      <li><a>Link</a></li>
-      <li>
-        <details class="border-gray-600">
-          <summary>Parent</summary>
-          <ul class="bg-base-100 rounded-t-none p-2">
-            <li><a>Link 1</a></li>
-            <li><a>Link 2</a></li>
-          </ul>
-        </details>
-      </li>
-    </ul>
+  <div class="col-span-11">
+    <a href="{% url 'change_theme' %}"
+       class="fixed top-36 right-0 p-3 rounded-l-lg
+         bg-blue-900 text-white hover:bg-blue-700
+         dark:bg-blue-600 dark:hover:bg-blue-400">
+      Change Theme</a>
+    <div class="pt-20 px-6">
+      {% block content %}
+        <h1>FactoryBoy Lecture</h1>
+      {% endblock content %}
+    </div>
   </div>
-</div>
-<div class="container mx-auto bg-green-300">
-  <section class="flex items-center justify-center h-screen">
-    <h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-  </section>
 </div>
 </body>
 </html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <a href="{% url 'bucket_list:activity-create' %}">Add new</a>
+  <div>
+    <ul>
+      {% for activity in activities %}
+        <li> {{ activity.name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock content %}
