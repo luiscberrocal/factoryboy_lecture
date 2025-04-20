@@ -4,6 +4,7 @@ from django.utils import timezone
 class Country(models.Model):
     name = models.CharField(max_length=100, unique=True)
     code = models.CharField(max_length=2, unique=True, blank=True, null=True, help_text="ISO 3166-1 alpha-2 code")
+    region = models.CharField(max_length=100)
 
     class Meta:
         verbose_name_plural = "Countries"
